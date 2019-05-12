@@ -10,7 +10,7 @@ before_install:
 script:
 - docker run zainadnan/react-test npm test -- --coverage
 
-after_sucess:
+after_success:
 
 - docker build -t zainadnna/multi-client ./client
 - docker build -t zainadnan/multi-nginx ./nginx
