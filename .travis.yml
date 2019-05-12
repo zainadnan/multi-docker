@@ -1,7 +1,7 @@
 sudo: required
 
 services:
- - docker
+- docker
 
 before_install:
 
@@ -15,13 +15,10 @@ after_success:
 - docker build -t zainadnna/multi-client ./client
 - docker build -t zainadnan/multi-nginx ./nginx
 - docker build -t zainadnan/multi-server ./server
-
 - docker build -t zainadnan/multi-worker ./worker
 
 # Log in to the docker CLI
-#
-#
-#
+
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 # Take those images and push to Docker Hun
