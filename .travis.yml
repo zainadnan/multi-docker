@@ -12,7 +12,7 @@ script:
 
 after_success:
 
-- docker build -t zainadnna/multi-client ./client
+- docker build -t zainadnan/multi-client ./client
 - docker build -t zainadnan/multi-nginx ./nginx
 - docker build -t zainadnan/multi-server ./server
 - docker build -t zainadnan/multi-worker ./worker
