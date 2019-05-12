@@ -20,11 +20,12 @@ after_success:
 
 # Log in to the docker CLI
 #
-- echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+#
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 # Take those images and push to Docker Hun
 
-- docker push zainadnna/multi-client
+- docker push zainadnan/multi-client
 - docker push zainadnan/multi-nginx
 - docker push zainadnan/multi-server
 - docker push zainadnan/multi-worker
