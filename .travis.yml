@@ -21,7 +21,7 @@ after_success:
 # Log in to the docker CLI
 #
 #
-echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_USERNAME" --password-stdin
+echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
 
 # Take those images and push to Docker Hun
 
