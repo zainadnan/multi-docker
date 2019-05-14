@@ -1,0 +1,56 @@
+{
+
+	"AWSEBDockerrunVersion": 2,
+	"containerDeinations": [
+
+		{
+
+			"name": "client",
+			"image": "zainadnan/multi-client",
+			"hostname": "client",
+			"essential": false
+		},
+
+		{
+
+			"name": "server",
+			"image": "zainadnan/multi-server",
+			"hostname": "api",
+			"essential": false
+
+		},
+
+		{
+
+			"name": "worker",
+			"image": "zainadnan/multi-worker",
+			"hostname": "worker",
+			"essential": false
+
+		},
+
+		{
+			"name": "nginx",
+			"image": "zainadnan/multi-nginx",
+			"hostname": "nginx",
+			"essential": true,
+			"portMappings": [
+
+				{
+
+					"hostPort": 80,
+
+					"containerPort": 80
+				}
+
+			],
+
+			"links": ["client", "server"]
+
+
+
+
+		}
+
+	]
+}
