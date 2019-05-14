@@ -8,7 +8,8 @@
 			"name": "client",
 			"image": "zainadnan/multi-client",
 			"hostname": "client",
-			"essential": false
+			"essential": false,
+                        "memory": 128
 		},
 
 		{
@@ -16,7 +17,8 @@
 			"name": "server",
 			"image": "zainadnan/multi-server",
 			"hostname": "api",
-			"essential": false
+			"essential": false,
+                        "memory": 128
 
 		},
 
@@ -25,7 +27,8 @@
 			"name": "worker",
 			"image": "zainadnan/multi-worker",
 			"hostname": "worker",
-			"essential": false
+			"essential": false,
+                        "memory": 128
 
 		},
 
@@ -45,9 +48,9 @@
 
 			],
 
-			"links": ["client", "server"]
+			"links": ["client", "server"],
 
-
+                        "memory": 128
 
 
 		}
